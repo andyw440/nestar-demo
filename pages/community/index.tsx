@@ -1,16 +1,17 @@
+import { NextPage } from "next";
 import { useState } from "react";
-// Pages Router renders Client side by default, but _document.tsx file is used to render Server side
+import withLayoutBasic from "@/libs/components/layout/LayoutBasic";
 
-const Community = () => {
+const Community: NextPage = () => {
   const [title, setTitle] = useState<string>("hello");
   return (
     <div>
       COMMUNITY{" "}
       <button onClick={() => alert("Hello MIT")} style={{ margin: "15px" }}>
-        PressMe
+        PresMe
       </button>
     </div>
   );
 };
 
-export default Community;
+export default withLayoutBasic(Community);
