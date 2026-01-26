@@ -5,7 +5,7 @@ import { NextPage } from "next";
 const PropertyList: NextPage = () => {
   return (
     <>
-      <Container>Property List</Container>
+      <Container>Property List single page</Container>
     </>
   );
 };
