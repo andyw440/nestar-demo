@@ -2,7 +2,7 @@ import { Stack } from "@mui/material";
 import Head from "next/head";
 import Top from "../Top";
 import Footer from "../Footer";
-import HeaderFilter from "../HeaderFilter";
+import HeaderFilter from "../homepage/HeaderFilter";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
