@@ -1,13 +1,17 @@
 import withLayoutBasic from "@/libs/components/layout/LayoutBasic";
-import { Container } from "@mui/material";
-import { NextPage } from "next";
+import useDeviceDetect from "@/libs/components/hooks/useDeviceDetect";
+import { Container, Stack } from "@mui/material";
 
-const PropertyDetail: NextPage = () => {
-  return (
-    <>
-      <Container>Property Details page</Container>
-    </>
-  );
+const PropertyDetail = () => {
+  const device = useDeviceDetect();
+  if (device == "mobile") {
+    return <Stack>PROPERTY DETAIL MOBILE</Stack>;
+  } else {
+    return (
+      <>
+        <Container>Property Detail </Container>
+      </>
+    );
+  }
 };
-
-export default withLayoutBasic(PropertyDetail);
+export default withLayoutBasic(PropertyDetail); // export default PropertyDetail;
